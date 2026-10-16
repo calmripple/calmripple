@@ -15,15 +15,15 @@ jobs:
     runs-on: ubuntu-latest
     name: generate-github-profile-3d-contrib
     steps:
-      - uses: actions/checkout@v4
-      - uses: yoshi389111/github-profile-3d-contrib@0.7.0
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: yoshi389111/github-profile-3d-contrib@0c65111d31fe6b7c1c40b63bc307efc844fa4d2b # 0.7.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          USERNAME: cnjimbo
+          USERNAME: calmripple
       - name: Commit & Push
         run: |
-          git config user.name cnjimbo
-          git config user.email cnjimbo@dmsrs.org
+          git config user.name calmripple
+          git config user.email calmripple@dmsrs.org
           git add -A .
           git commit -m "generated"
           git push
